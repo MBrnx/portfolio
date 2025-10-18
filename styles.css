@@ -1,0 +1,17 @@
+.nav-link:hover {
+    color: blue;
+    transition: color 0.3s;
+}
+
+section h2 {
+    color: red;
+    margin-bottom: 15px;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+section#accueil {
+    scroll-margin-top: 70px;
+}
