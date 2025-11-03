@@ -1,10 +1,25 @@
 fetch('navbar.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('navbar-placeholder').innerHTML = data;
-        window.scrollTo(0, 0);
-    })
-.catch(error => console.error('Erreur de chargement de la navbar:', error));
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('navbar-placeholder').innerHTML = data;
+
+    // ---- Maintenant que le menu existe ----
+    const navbarCollapse = document.getElementById('navbarNav');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+
+    // Créer une instance Bootstrap si elle n'existe pas
+    const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse, { toggle: false });
+
+    // Fermer le menu si clic en dehors
+    document.addEventListener('click', (e) => {
+      if (!navbarCollapse.contains(e.target) && !navbarToggler.contains(e.target)) {
+        if (navbarCollapse.classList.contains('show')) {
+          bsCollapse.hide();
+        }
+      }
+    });
+  })
+  .catch(error => console.error('Erreur de chargement de la navbar:', error));
 
 fetch('footer.html')
     .then(response => response.text())
@@ -33,3 +48,4 @@ window.addEventListener("scroll", () => {
 backToTopButton.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
