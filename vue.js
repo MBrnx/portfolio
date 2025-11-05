@@ -3,11 +3,13 @@ fetch('navbar.html')
   .then(data => {
     document.getElementById('navbar-placeholder').innerHTML = data;
 
-    // ---- Maintenant que le menu existe ----
+    // ---- Tout code dépendant de la navbar ici ----
     const navbarCollapse = document.getElementById('navbarNav');
     const navbarToggler = document.querySelector('.navbar-toggler');
+    const toggleBtn = document.getElementById('theme-toggle'); // ⚡ Ici il existe maintenant
+    const body = document.body;
 
-    // Créer une instance Bootstrap si elle n'existe pas
+    // Initialiser Bootstrap Collapse
     const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse, { toggle: false });
 
     // Fermer le menu si clic en dehors
@@ -18,15 +20,44 @@ fetch('navbar.html')
         }
       }
     });
+
+    // ---- Theme toggle avec préférence système ----
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Appliquer le thème au chargement
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      body.setAttribute('data-theme', 'dark');
+      toggleBtn.textContent = '☀️';
+    } else {
+      body.removeAttribute('data-theme');
+      toggleBtn.textContent = '🌙';
+    }
+
+    // Gestion du bouton toggle
+    toggleBtn.addEventListener('click', () => {
+      if (body.getAttribute('data-theme') === 'dark') {
+        body.removeAttribute('data-theme');
+        toggleBtn.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.setAttribute('data-theme', 'dark');
+        toggleBtn.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+
+    // Forcer scroll en haut au chargement
+    window.scrollTo(0, 0);
   })
   .catch(error => console.error('Erreur de chargement de la navbar:', error));
 
 fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('footer-placeholder').innerHTML = data;
-    })
-.catch(error => console.error('Erreur de chargement du footer:', error));
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-placeholder').innerHTML = data;
+  })
+  .catch(error => console.error('Erreur de chargement du footer:', error));
 
 
 const backToTopButton = document.getElementById("back-to-top");
@@ -48,4 +79,3 @@ window.addEventListener("scroll", () => {
 backToTopButton.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
-
