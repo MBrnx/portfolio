@@ -5,10 +5,10 @@
   --bg-color: #ffffff;
   --bg-image: url('fond.jpg'); /* fond clair */
   --text-color: #333333;
-  --section-bg: rgba(255, 255, 255, 0.85);
-  --accent-color: #007bff;
+  --section-bg: rgb(221, 221, 221);
+  --accent-color: #0372e9;
   --nav-bg: #343a40;
-  --btn-bg: #007bff;
+  --btn-bg: #4d93dd;
   --btn-color: #ffffff;
   --contact-bg: linear-gradient(135deg, #f5f7fa, #e4ebf5);
 }
