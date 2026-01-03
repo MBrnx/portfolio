@@ -1,123 +1,193 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mathis Bruniaux – Portfolio | Licence Informatique</title>
-    <meta name="description" content="Portfolio de Mathis Bruniaux, étudiant en Licence Informatique, spécialisé en développement logiciel et systèmes.">
+    <meta name="description" content="Portfolio de Mathis Bruniaux, étudiant en Licence Informatique, spécialisé en développement logiciel, systèmes et web.">
+
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.45/dist/vue.global.js"></script>
-    <script src="https://unpkg.com/axios@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </head>
+
 <body>
-    <div id="haut"></div>
-    <header>
-        <div id="navbar-placeholder"></div>
-        <button id="theme-toggle" class="btn btn-secondary">🌙</button>
-    </header>
+<div id="haut"></div>
 
-    <main class="container-fluid my-4 pt-4">
+<header>
+    <div id="navbar-placeholder"></div>
+    <button id="theme-toggle" class="btn btn-secondary">🌙</button>
+</header>
 
-        <div id="en-tete" class="container-fluid mb-4">
-            <div class="row align-items-center">
-                <div id="texte_en-tete" class="col-md-6 text-center">
-                    <h1>Bienvenue sur mon portfolio</h1>
-                    <p>&Eacute;tudiant en 3&egrave;me ann&eacute;e de licence informatique</p>
-                    <button class="btn btn-primary btn-lg" onclick="window.open('CV.pdf', '_blank')">Voir mon CV</button>
-                </div>
+<main class="container-fluid my-4 pt-5">
 
-                <div id="image_en-tete" class="col-md-6 text-center">
-                    <img src="software.jpg" alt="Mon Image" class="img-fluid rounded" style="max-width: 300px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);">
-                </div>
+    <!-- ================= EN-TÊTE ================= -->
+    <section id="en-tete" class="container-fluid mb-4">
+        <div class="row align-items-center">
+
+            <div class="col-md-6 text-center" id="texte_en-tete">
+                <h1>Mathis Bruniaux</h1>
+                <p>
+                    Étudiant en 3e année de Licence Informatique<br>
+                    Développement logiciel & systèmes
+                </p>
+
+                <p>
+                    Recherche de stage à partir du <strong>13 avril 2026</strong><br>
+                    Durée minimale : <strong>2 mois</strong>
+                </p>
+
+                <button class="btn btn-primary btn-lg"
+                        onclick="window.open('CV.pdf', '_blank')">
+                    Voir mon CV (PDF)
+                </button>
             </div>
+
+            <div class="col-md-6 text-center" id="image_en-tete">
+                <img src="software.jpg" alt="Illustration développement"
+                     class="img-fluid rounded"
+                     style="max-width:300px;">
+            </div>
+
         </div>
+    </section>
 
+    <!-- ================= ACCUEIL ================= -->
+    <section id="accueil">
+        <h2>Profil</h2>
 
-        <section id="accueil">
-            <h2>Accueil</h2>
-            <p>&Eacute;tudiant en 3&egrave;me ann&eacute;e de Licence Informatique, motiv&eacute; par le d&eacute;veloppement logiciel et l’administration syst&egrave;me. Je cherche un stage de 2 mois minimum mais peut-&ecirc;tre rallong&eacute; &agrave; la demande de l’employeur &agrave; partir du 13/04/26 pour appliquer mes comp&eacute;tences en Python, C, Bash, SQL et d&eacute;veloppement web et contribuer &agrave; des projets concrets seul ou en &eacute;quipe. </p>
-        </section>
+        <p>
+            Étudiant en Licence Informatique, je m’oriente vers le
+            <strong>développement logiciel</strong> et
+            l’<strong>administration système</strong>.
+        </p>
 
-        <section id="projets">
-            <h2>Projets</h2>
-            <p> Projet 1 – application web <br>
-            J’ai réalisé seul un site internet pour mon club de volleyball (lien du site). J’ai utilisé du HTML, CSS, JS, MongoDB, Node. </p>
+        <p>
+            J’ai acquis de solides bases en programmation (Python, C),
+            en scripting (Bash), en bases de données (SQL) et en
+            développement web.
+        </p>
+
+        <p>
+            Sérieux, autonome et à l’aise en travail d’équipe,
+            je souhaite mettre mes compétences au service de projets concrets
+            dans le cadre d’un stage.
+        </p>
+    </section>
+
+    <!-- ================= PROJETS ================= -->
+    <section id="projets">
+        <h2>Projets</h2>
+
+        <article class="mb-4">
+            <h3>Site web – Club de volleyball</h3>
             <p>
-            Projet 2 – Portfolio <br>
-            J’ai également réalisé mon portfolio (lien du portfolio) en utilisant HTML, CSS, JS, Bootstrap. 
+                Conception et développement d’un site web destiné à un club de volleyball,
+                permettant de présenter le club et ses activités.
             </p>
-        </section>
 
-        <section id="apropos">
-            <h2>&Agrave; propos</h2>
-            <p><h4>FORMATION</h4>
-            Lycée Jessé de Forest – Avesnes/Helpe <br>
-            Septembre 2019 – Juillet 2022 <br>
-            Baccalauréat Général mention Assez Bien. <br>
-            Spécialité Mathématiques (seulement en première), Physiques Chimies, SVT.  <br>
-            
-            Université du Mont Huy – Licence Informatique <br>
-            Septembre 2023 <br>
-            Actuellement en 3ème année de Licence Informatique à l’Université Polytechnique des Haut-de-France. <br>
-            1ère année : <br>
-            2ème année :  <br>
-            3ème année : en cours <br>
+            <ul>
+                <li><strong>Technologies :</strong> HTML, CSS, JavaScript, Node.js, MongoDB</li>
+                <li><strong>Fonctionnalités :</strong> pages dynamiques, gestion de contenu</li>
+                <li><strong>Rôle :</strong> développement complet du projet</li>
+            </ul>
 
-            <br>
-            <h4>COMPÉTENCES</h4>
-            Langages : Python ; C ; Java ; JavaScript ; SQL <br>
-            Web : HTML ; CSS ; Framework JS basiques <br>
-            Scripting / Outils : Bash Shell ; Git ; Linux <br>
-            Bases de données : SQL (conception et requêtes) <br>
-            Autres : notions d’architecture client serveur, tests unitaires <br>
+            <a href="#" target="_blank">Voir le site</a> |
+            <a href="#" target="_blank">Code source</a>
+        </article>
 
-            <br>
-            <h4>LOISIRS</h4>
-            Lecture <br>
-            Volley-Ball <br>
-            Informatique <br>
+        <article>
+            <h3>Portfolio personnel</h3>
+            <p>
+                Réalisation de mon portfolio afin de présenter mon parcours,
+                mes compétences et mes projets.
             </p>
-        </section>
 
-        <section id="contact" class="contact-section">
-            <h2>📬 Me Contacter</h2>
-            <p>Je suis toujours ouvert aux nouvelles opportunit&eacute;s et collaborations !</p>
-            
-            <div class="contact-list">
-                <a href="mailto:mathis.bruniaux@gmail.com" class="contact-item">
+            <ul>
+                <li><strong>Technologies :</strong> HTML, CSS, JavaScript, Bootstrap</li>
+                <li><strong>Fonctionnalités :</strong> thème clair/sombre, navigation fluide</li>
+                <li><strong>Objectif :</strong> support de candidature pour stages</li>
+            </ul>
+
+            <a href="#" target="_blank">Voir le portfolio</a> |
+            <a href="#" target="_blank">Code source</a>
+        </article>
+    </section>
+
+    <!-- ================= À PROPOS ================= -->
+    <section id="apropos">
+        <h2>À propos</h2>
+
+        <h4>Formation</h4>
+        <ul>
+            <li>
+                <strong>Licence Informatique</strong> – Université Polytechnique des Hauts-de-France<br>
+                2023 – en cours (3e année)
+            </li>
+            <li>
+                <strong>Baccalauréat Général</strong> – Lycée Jessé de Forest<br>
+                Mention Assez Bien
+            </li>
+        </ul>
+
+        <h4>Compétences</h4>
+        <ul>
+            <li><strong>Langages :</strong> Python, C, Java, JavaScript, SQL</li>
+            <li><strong>Web :</strong> HTML, CSS, Bootstrap</li>
+            <li><strong>Systèmes :</strong> Linux, Bash</li>
+            <li><strong>Outils :</strong> Git</li>
+            <li><strong>Autres :</strong> architecture client-serveur, bases des tests unitaires</li>
+        </ul>
+
+        <h4>Centres d’intérêt</h4>
+        <ul>
+            <li>Volley-ball</li>
+            <li>Lecture</li>
+            <li>Informatique</li>
+        </ul>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="contact-section">
+        <h2>Me contacter</h2>
+        <p>
+            Ouvert aux opportunités de stage et aux échanges professionnels.
+        </p>
+
+        <div class="contact-list">
+            <a href="mailto:mathis.bruniaux@gmail.com" class="contact-item">
                 <img src="mail.png" alt="mail">
                 <span>mathis.bruniaux@gmail.com</span>
-                </a>
+            </a>
 
-                <a href="https://www.linkedin.com/in/mathis-b-204a9636b/" target="_blank" class="contact-item">
+            <a href="https://www.linkedin.com/in/mathis-b-204a9636b/" target="_blank" class="contact-item">
                 <img src="linkedin.png" alt="linkedin">
                 <span>LinkedIn</span>
-                </a>
+            </a>
 
-                <a href="https://github.com/MBrnx" target="_blank" class="contact-item">
+            <a href="https://github.com/MBrnx" target="_blank" class="contact-item">
                 <img src="github.png" alt="github">
                 <span>GitHub</span>
-                </a>
-            </div>
-        </section>
+            </a>
+        </div>
+    </section>
 
-    </main>
+</main>
 
-    <footer>
-        <div id="footer-placeholder"></div>
-    </footer>
+<footer>
+    <div id="footer-placeholder"></div>
+</footer>
 
-    <button id="back-to-top" title="Retour en haut">
-        <svg class="progress-ring" width="60" height="60">
-            <circle class="progress-ring__background" cx="30" cy="30" r="26" />
-            <circle class="progress-ring__circle" cx="30" cy="30" r="26" />
-        </svg>
-        <span>&#8679;</span>
-    </button>
+<button id="back-to-top" title="Retour en haut">
+    <svg class="progress-ring" width="60" height="60">
+        <circle class="progress-ring__background" cx="30" cy="30" r="26"/>
+        <circle class="progress-ring__circle" cx="30" cy="30" r="26"/>
+    </svg>
+    <span>↑</span>
+</button>
 
-</body>
 <script src="vue.js"></script>
+</body>
 </html>
