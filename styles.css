@@ -317,3 +317,70 @@ button, .btn {
 #theme-toggle:hover {
   transform: scale(1.1);
 }
+
+/* ============================= */
+/* Correction texte mode sombre  */
+/* ============================= */
+
+[data-theme="dark"], 
+[data-theme="dark"] * {
+    color: var(--text-color) !important;
+}
+
+/* ================= TIMELINE FIX ================= */
+
+.timeline {
+    position: relative;
+    margin: 40px auto;
+    padding-left: 40px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+/* Ligne verticale */
+.timeline-line {
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--accent-color);
+}
+
+/* Point bleu */
+.timeline-dot {
+    position: absolute;
+    left: -11px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    border: 3px solid var(--bg-color);
+    z-index: 10;
+}
+
+/* Carte */
+.timeline-content {
+    background: var(--section-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.timeline-content .date {
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}

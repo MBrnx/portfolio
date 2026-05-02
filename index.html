@@ -17,7 +17,58 @@
 <div id="haut"></div>
 
 <header>
-    <div id="navbar-placeholder"></div>
+
+    <!-- NAVBAR FR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed"
+        style="margin:5px; border-radius:10px; height:100px; padding-left:20px; padding-right:100px;">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#haut">BRUNIAUX Mathis</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#accueil">Accueil</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projets">Projets</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#apropos">À propos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Expériences</a>
+                    </li>
+
+                    <!-- Sélecteur de langue -->
+                    <li class="nav-item d-flex align-items-center ms-3">
+                        <a href="index.html">
+                            <img src="fr.webp" alt="Français" style="width:32px; cursor:pointer;">
+                        </a>
+                        <a href="index_en.html" class="ms-2">
+                            <img src="en.svg" alt="English" style="width:32px; cursor:pointer;">
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <button id="theme-toggle" class="btn btn-secondary">🌙</button>
 </header>
 
@@ -32,11 +83,6 @@
                 <p>
                     Étudiant en 3e année de Licence Informatique<br>
                     Développement logiciel & systèmes
-                </p>
-
-                <p>
-                    Recherche de stage à partir du <strong>13 avril 2026</strong><br>
-                    Durée minimale : <strong>2 mois</strong>
                 </p>
 
                 <button class="btn btn-primary btn-lg"
@@ -94,7 +140,7 @@
                 <li><strong>Rôle :</strong> développement complet du projet</li>
             </ul>
 
-            <a href="https://volleyballdompierre.fr" target="volleyballdompierre.fr">Voir le site</a> |
+            <a href="https://volleyballdompierre.fr" target="_blank">Voir le site</a> |
             <a href="https://github.com/MBrnx/volleyballdompierre" target="_blank">Code source</a>
         </article>
 
@@ -123,15 +169,15 @@
         <ul>
             <li>
                 <strong>Baccalauréat Général</strong> – Lycée Jessé de Forest<br>
-                Baccalauréat Général mention Assez Bien.<br>
+                Mention Assez Bien.<br>
                 Spécialité Mathématiques (seulement en première), Physiques Chimies, SVT.
             </li>
             <li>
-                De septembre 2022 à Février 2023, j’étais à l’université de Lille en PASS (Parcours Accès Spécifique Santé) pour ensuite me réorienter vers l’informatique.<br>
-                De Avril 2023 à Juillet 2023, j’ai travaillé en tant qu’intérimaire chez Ménissez 
+                De septembre 2022 à février 2023 : PASS (Université de Lille).<br>
+                D’avril 2023 à juillet 2023 : intérimaire chez Ménissez.
             </li>
             <li>
-                <strong>Licence Informatique</strong> – Université Polytechnique des Hauts-de-France<br>
+                <strong>Licence Informatique</strong> – UPHF<br>
                 1ère année : 13.89/20 <br>
                 2ème année : 11.917/20 <br>
                 3ème année S5 : 11.918/20
@@ -143,17 +189,67 @@
             <li><strong>Langages :</strong> Python, C, Java, JavaScript, SQL</li>
             <li><strong>Web :</strong> HTML, CSS, Bootstrap</li>
             <li><strong>Systèmes :</strong> Linux, Bash</li>
-            <li><strong>Outils :</strong> Git </li>
-            <li><strong>Autres :</strong> architecture client-serveur, bases des tests unitaires</li>
+            <li><strong>Outils :</strong> Git</li>
+            <li><strong>Autres :</strong> architecture client-serveur, tests unitaires (bases)</li>
         </ul>
 
         <h4>Centres d’intérêt</h4>
         <ul>
-            <li>Volley-ball (pratique en club à Dompierre-sur-Helpe)</li>
+            <li>Volley-ball (club de Dompierre-sur-Helpe)</li>
             <li>Lecture</li>
             <li>Informatique</li>
-            <li>Football (pratiquais jusqu'à 2022 en club à Dompierre-sur-Helpe)</li>
+            <li>Football (jusqu’en 2022)</li>
         </ul>
+    </section>
+
+    <!-- ================= EXPÉRIENCE PROFESSIONNELLE ================= -->
+    <section id="experience">
+        <h2>Expérience professionnelle</h2>
+
+        <article class="mb-4">
+            <h3>Intérimaire – Ménissez</h3>
+            <p><strong>Mars 2023 – Juillet 2023</strong></p>
+            <ul>
+                <li>Travail en environnement industriel</li>
+                <li>Respect des normes de sécurité et des procédures</li>
+                <li>Gestion de tâches répétitives nécessitant rigueur et autonomie</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>Projets universitaires</h3>
+            <p><strong>2023 – 2026</strong></p>
+            <ul>
+                <li>Développement d’applications en Python, C et Java</li>
+                <li>Travaux pratiques en administration Linux et scripting Bash</li>
+                <li>Conception de bases de données SQL</li>
+                <li>Projets web (HTML, CSS, JavaScript, Bootstrap)</li>
+            </ul>
+        </article>
+
+        <article class="mb-4">
+            <h3>Développeur Web – Projet bénévole (VolleyBall Dompierre)</h3>
+            <p><strong>2025 – 2026</strong></p>
+            <ul>
+                <li>Création complète du site web du club</li>
+                <li>Intégration de pages dynamiques et gestion du contenu</li>
+                <li>Maintenance, mises à jour et optimisation du site</li>
+                <li>Gestion du streaming YouTube et overlays personnalisés</li>
+            </ul>
+        </article>
+
+        <article class="mb-4">
+            <h3>Stage – Haute Sambre</h3>
+            <p><strong>Avril 2026 – Juin 2026</strong></p>
+            <ul>
+                <li>Automatisation d’indicateurs à partir de bases de données Access et SQL Server</li>
+                <li>Analyse des besoins des différents services (production, qualité, maintenance…)</li>
+                <li>Développement de scripts VBA et requêtes SQL pour fiabiliser les calculs</li>
+                <li>Création de tableaux Excel automatisés pour l’affichage des résultats</li>
+                <li>Travail en équipe et communication régulière avec les responsables de secteur</li>
+            </ul>
+        </article>
+
     </section>
 
     <!-- ================= CONTACT ================= -->
@@ -183,8 +279,11 @@
 
 </main>
 
-<footer>
-    <div id="footer-placeholder"></div>
+<!-- FOOTER FR -->
+<footer class="bg-dark text-light py-3">
+    <div class="container text-center">
+        <span>&copy; 2025 BRUNIAUX Mathis. Tous droits réservés.</span>
+    </div>
 </footer>
 
 <button id="back-to-top" title="Retour en haut">
